@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import { hot } from 'react-hot-loader';
 
 class Child extends Component {
   constructor(...args) {
@@ -7,13 +9,14 @@ class Child extends Component {
   }
   render() {
     const { local } = this.state;
+    const num = this.props.count.num;
     return (
       <p>
-        Child Component
+        Hello Iliya
         {" "}
         <input
           type="text"
-          value={local}
+          value={local + " " + num}
           onChange={e => this.setState({local: e.target.value})}
         />
       </p>
@@ -21,4 +24,5 @@ class Child extends Component {
   }
 }
 
-export default Child;
+
+export default hot(module)( connect(state => ({count: state}))(Child) );

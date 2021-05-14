@@ -4,7 +4,7 @@ const initial = {
 const handlers = {
   INC(s) {
     return {
-      num: s.num + 1
+      num: (s.num + 1) * 0.3 / 4
     };
   }
 };

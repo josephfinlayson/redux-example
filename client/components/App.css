@@ -2,7 +2,11 @@
     composes: box from "../common/layout.css";
     color: white;
     cursor: pointer;
-    border: 1px solid green;
-    border-radius: 3px;
-    background-color: green;
+    border: 1px solid rgb(128, 26, 0);
+    border-radius: 10px;
+    background-color: rgb(128, 0, 0);
+}
+
+html {
+    color: blue !important
 }
